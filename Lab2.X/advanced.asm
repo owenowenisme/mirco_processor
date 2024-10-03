@@ -7,19 +7,19 @@ List p=18f4520
 setup:
     LFSR 0, 0x100
     
-    movlw 0x08
-    movwf POSTINC0 
-    movlw 0x7C
-    movwf POSTINC0 
-    movlw 0x78 
+    movlw 0xFF
     movwf POSTINC0 
     movlw 0xFE
     movwf POSTINC0 
-    movlw 0x34 
+    movlw 0xFD
     movwf POSTINC0 
-    movlw 0x7A 
+    movlw 0xFC
     movwf POSTINC0 
-    movlw 0x0D
+    movlw 0xFB
+    movwf POSTINC0 
+    movlw 0xFA
+    movwf POSTINC0 
+    movlw 0xF9
     movwf POSTINC0 
     
     movlw 0x07
@@ -57,8 +57,8 @@ swap:
     goto outer_loop
 
 no_swap:
-    addwf POSTINC0,w ;dummy
-    addwf POSTINC1,w
+    INCF FSR0L
+    INCF FSR1L
 
     goto outer_loop
     

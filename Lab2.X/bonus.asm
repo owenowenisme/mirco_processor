@@ -5,30 +5,28 @@ List p=18f4520
     org 0x00 ;PC = 0x00
     
 setup:
-    movlw 0xFE
+    movlw 0x33
     movwf 0x09
     
     movlw 0x00
     movwf 0x11
     
-    movlw 0x7F
-    movwf 0x16
     
     LFSR 0, 0x000
     
-    movlw 0x28
+    movlw 0x00
     movwf POSTINC0 
-    movlw 0x34
+    movlw 0x11
     movwf POSTINC0 
-    movlw 0x7A
+    movlw 0x22
     movwf POSTINC0 
-    movlw 0x80
+    movlw 0x33
     movwf POSTINC0 
-    movlw 0xA7
+    movlw 0x44
     movwf POSTINC0 
-    movlw 0xD1
+    movlw 0x55
     movwf POSTINC0 
-    movlw 0xFE
+    movlw 0x66
     movwf POSTINC0 
     
     movlw 0x10
